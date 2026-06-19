@@ -3,6 +3,7 @@ import { Crown, Gift, Clock, ChevronRight, Ticket, Sparkles } from 'lucide-react
 import { useNavigate } from 'react-router-dom';
 import { useUserStore } from '../store/useUserStore';
 import { NumberRoller } from '../components/NumberRoller';
+import { CheckInCalendar } from '../components/CheckInCalendar';
 
 export function Member() {
   const { user, coupons, getAvailableCoupons, getUsedCoupons } = useUserStore();
@@ -97,6 +98,8 @@ export function Member() {
       </div>
 
       <div className="max-w-lg mx-auto px-4 -mt-8">
+        <CheckInCalendar />
+
         <div className="bg-white rounded-2xl shadow-card p-4 mb-4">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-serif font-bold text-coffee-800 text-lg">

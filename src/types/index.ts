@@ -48,3 +48,14 @@ export interface StoreInfo {
   lat: number;
   lng: number;
 }
+
+export interface CheckInRecord {
+  date: string;
+  pointsEarned: number;
+}
+
+export interface CheckInState {
+  records: CheckInRecord[];
+  consecutiveDays: number;
+  lastCheckInDate: string | null;
+}
